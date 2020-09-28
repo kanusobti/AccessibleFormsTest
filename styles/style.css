@@ -382,7 +382,7 @@ header {
   padding: 2% 0;
 }
 
-header .navList {
+header ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,7 +391,7 @@ header .navList {
           justify-content: space-between;
 }
 
-header .navList a {
+header ul a {
   font-size: 1.2em;
   color: white;
 }
