@@ -1,0 +1,44 @@
+@media (max-width: 1420px) {
+  label {
+    padding: 2% 10% 0 0;
+  }
+}
+
+@media (max-width: 1210px) {
+  label {
+    width: 40%;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1034px) {
+    label {
+        padding-top: 3%;
+      }
+}
+
+@media (max-width: 764px) {
+    .textbox{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    label{
+padding-right: 0%;
+padding-top:8%;
+width: 100%;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+    input[type="text"],
+  input[type="password"] {
+    width: 100%;
+  }
+}

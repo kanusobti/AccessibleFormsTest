@@ -1,0 +1,36 @@
+$green:#008a00;// #1db954;
+$white: white;
+$formBackground: #f5f9f7;
+$buttonHover: #007c16;
+$skipLinkFont: #5bd453;
+$skipLinkBckgrd: #1a5336;
+
+body {
+  font-family: "Lato", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrapper {
+  margin: 0 auto;
+  max-width: 70%;
+}
+
+.skipLink {
+  text-align: center;
+
+  a {
+    background-color: $skipLinkBckgrd;
+    padding: 6px;
+    width: 100%;
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    color: $skipLinkFont;
+    display: block;
+    &:focus {
+      top: 0px;
+    }
+  }
+}

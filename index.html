@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Login Form</title>
+  </head>
+  <body>
+    <header>
+      <div class="skipLink">
+        <a href="#username">Skip to main content</a>
+      </div>
+      <nav role="navigation">
+        <ul class="wrapper">
+          <li class="navList">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      <div class="wrapper">
+        <div id="loginError" class="loginError" tabindex="-1"></div>
+        <form
+          method="GET"
+          action="success.html"
+          onsubmit="return checkForm(this); return false;"
+        >
+          <h1>Login</h1>
+          <fieldset>
+            <div class="textbox">
+              <label for="username" id="lblUsername">User name: </label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter your user name"
+                aria-required="true"
+                aria-label="User Name"
+                onkeyup="resetUsername()"
+              />
+            </div>
+            <div class="textbox">
+              <label for="password" id="lblPassword">Password: </label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                aria-required="true"
+                onkeyup="ValidatePassword(this)"
+                onfocus="displayRules()"
+                aria-labelledby="pwdSpanHidden lblPassword UpperCase LowerCase Numbers"
+              />
+              <span id="pwdSpanHidden" class="pwdSpanHidden"
+                >Enter your password</span
+              >
+            </div>
+          </fieldset>
+          <div class="requirementsPassword" id="passwordRequirements">
+            <p id="UpperCase" class="validator pwdFail">
+              <span id="UpperCaseSpan"></span>Must have atleast 1 upper case
+              character
+            </p>
+            <p id="LowerCase" class="validator pwdFail">
+              <span id="LowerCaseSpan"></span>Must have atleast 1 lower case
+              character
+            </p>
+            <p id="Numbers" class="validator pwdFail">
+              <span id="NumbersSpan"></span>Must have atleast 1 numeric
+              character
+            </p>
+          </div>
+
+          <button
+            type="submit"
+            id="loginButton"
+            aria-label="Login to your account"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="wrapper">
+        <p>Copyright Kanu Sobti @2020</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 id="success" aria-describedby="success" tabindex="-1">Success!</h1>
+      <h2 id="message" aria-describedby="message" tabindex="0"></h2>
+    </div>
+    <script type="text/javascript">
+      document.getElementById("message").innerHTML =
+        "Welcome " +
+        getParameterByName("username") +
+        "! You have sucessfully signed in.";
+      
+      function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return "";
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
+    </script>
+  </body>
+</html>
